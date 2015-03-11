@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 12:04:25 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="in.com.dto.VendorDTO" table="VENDORDTO">
+		<id name="vendorCode" type="java.lang.Integer">
+			<column name="VENDORCODE" />
+			<generator class="increment" />
+		</id>
+		<property name="firstName" type="java.lang.String">
+			<column name="FIRSTNAME" />
+		</property>
+		<property name="lastName" type="java.lang.String">
+			<column name="LASTNAME" />
+		</property>
+		<property name="userName" type="java.lang.String">
+			<column name="USERNAME" />
+		</property>
+		<property name="password" type="java.lang.String">
+			<column name="PASSWORD" />
+		</property>
+		<property name="email" type="java.lang.String">
+			<column name="EMAIL" />
+		</property>
+		<property name="address" type="java.lang.String">
+			<column name="ADDRESS" />
+		</property>
+		<property name="companyCode" type="java.lang.Integer">
+			<column name="COMPANYCODE" />
+		</property>
+	</class>
+</hibernate-mapping>

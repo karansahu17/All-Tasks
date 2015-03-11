@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 2, 2014 11:50:58 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="in.co.dto.UserDTO" table="USERDTO">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="increment" />
+        </id>
+        <property name="firstName" type="java.lang.String">
+            <column name="FIRSTNAME" />
+        </property>
+        <property name="lastName" type="java.lang.String">
+            <column name="LASTNAME" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="loginId" type="java.lang.String">
+            <column name="LOGINID" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="lastLoginDate" type="java.util.Date">
+            <column name="LASTLOGINDATE" />
+        </property>
+        <property name="unsuccessfullLogin" type="int">
+            <column name="UNSUCCESSFULLLOGIN" />
+        </property>
+        <property name="status" type="int">
+            <column name="STATUS" />
+        </property>
+        <property name="lockk" type="boolean">
+            <column name="LOCKK" />
+        </property>
+    </class>
+</hibernate-mapping>

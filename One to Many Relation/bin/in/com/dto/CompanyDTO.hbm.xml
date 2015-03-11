@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 29, 2014 12:04:25 AM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="in.com.dto.CompanyDTO" table="COMPANYDTO">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="companyName" type="java.lang.String">
+			<column name="COMPANYNAME" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="DESCRIPTION" />
+		</property>
+		<set name="vendors" table="in.com.dto.VendorDTO" fetch="join"
+			cascade="all" lazy="false">
+			<key>
+				<column name="COMPANYCODE" />
+			</key>
+			<one-to-many class="in.com.dto.VendorDTO" />
+		</set>
+	</class>
+</hibernate-mapping>
